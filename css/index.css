@@ -1,4 +1,5 @@
 * {
+  font-family: 'Quicksand', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -9,11 +10,11 @@ html, body {
 }
 
 body {
-  background-color: antiquewhite;
+  background-image: url(/images/lined-paper.png);
+  background-color: #080936;
   color: #333;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,21 +46,30 @@ main {
 }
 
 .todo {
-  background-color: rgb(250, 230, 203);
-  border: 1px solid rgb(219, 207, 190);
-  padding: 10vw 15vw;
+  background-color: rgba(8, 9, 54, 0.85);
+  border: 1px solid #FFC636;
+  border-radius: 10px;
+  padding: 100px 200px;
+  box-shadow: rgba(255, 198, 54, 0.5) 0px 5px 20px;
+}
+
+.todo__img {
+  display: block;
+  max-width: 80px;
+  margin: 0 auto 20px;
 }
 
 .todo__title {
-  color: rgb(128, 163, 112);
-  font-weight: 300;
-  font-size: 36px;
+  color: #FFC636;
+  font-weight: 400;
+  font-size: 42px;
   letter-spacing: 1px;
   margin: 0;
   text-align: center;
 }
 
 .todo__copy {
+  color: #dddbff;
   font-weight: 400;
   margin: 0 0 30px 0;
   text-align: center;
@@ -73,11 +83,17 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
 }
 
 .todo__list li {
-  border-bottom: 1px solid rgb(197, 218, 188);
+  color: #dddbff;
+  border-bottom: 1px solid #20214A;
   padding: 6px 0;
+}
+
+.todo__list li span {
+  margin-left: 2px;
 }
 
 .todo__list li:first-child {
@@ -85,12 +101,13 @@ main {
 }
 
 .todo__list li button.btn {
-  background-color: rgb(108, 138, 86);
+  background-color: #0A0B5B;
   border: none;
   border-radius: 2px;
-  color: #fff;
+  color: #dddbff;
   cursor: pointer;
   float: right;
+  margin-left: 10px;
 }
 
 .todo__list li button.btn, input[type="button"] {
@@ -99,36 +116,42 @@ main {
   transition: all ease .6s;
 }
 
-.todo__list li button.btn:hover, input[type="button"]:hover {
-  background-color: rgb(85, 110, 68);
+.todo__list li button.btn:hover, .form__btn:hover {
+  background-color: #080848;
 }
 
 .strike-out {
   text-decoration: line-through;
 }
 
-input {
-  border: 1px solid #ccc;
-  padding: 6px;
+.form__text {
+  color: #0A0B5B;
+  font-weight: 600;
+  border: 1px solid #20214A;
+  padding: 12px;
 }
 
-input[type="text"] {
+.form__text:focus, .form__text:focus-visible {
+  outline: none;
+}
+
+.form__text {
   border-radius: 3px 0px 0px 3px;
 }
 
-input[type="text"]::-webkit-input-placeholder,
-input[type="text"]::-moz-placeholder,
-input[type="text"]:-ms-input-placeholder,
-input[type="text"]:-moz-placeholder {
-  font-family: 'Poppins', sans-serif;
+.form__text::-webkit-input-placeholder,
+.form__text::-moz-placeholder,
+.form__text:-ms-input-placeholder,
+.form__text:-moz-placeholder {
+  color: yellow;
 }
 
-input[type="button"] {
-  background-color: rgb(108, 138, 86);
+.form__btn {
+  background-color: #0A0B5B;
+  border: 1px solid #20214A;
   border-radius: 0px 3px 3px 0px;
-  color: #fff;
+  color: #dddbff;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
 }
 
 input[type="checkbox"] {
