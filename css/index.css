@@ -31,7 +31,7 @@ ul {
   margin: 0;
 }
 
-.main-container {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,13 +44,13 @@ ul {
           justify-content: center;
 }
 
-.todo-container {
+.todo {
   background-color: rgb(250, 230, 203);
   border: 1px solid rgb(219, 207, 190);
   padding: 10vw 15vw;
 }
 
-.todo-container h1 {
+.todo__title {
   color: rgb(128, 163, 112);
   font-weight: 300;
   font-size: 36px;
@@ -59,32 +59,32 @@ ul {
   text-align: center;
 }
 
-.todo-container p {
+.todo__copy {
   font-weight: 400;
   margin: 0 0 30px 0;
   text-align: center;
 }
 
-.todo-container h1 span {
+.todo__title--bold {
   font-weight: 600;
 }
 
-.todo-container form#todoForm {
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.todo-container ul li {
+.todo__list li {
   border-bottom: 1px solid rgb(197, 218, 188);
   padding: 6px 0;
 }
 
-.todo-container ul li:first-child {
+.todo__list li:first-child {
   margin-top: 10px;
 }
 
-.todo-container ul li button.btn {
+.todo__list li button.btn {
   background-color: rgb(108, 138, 86);
   border: none;
   border-radius: 2px;
@@ -93,13 +93,13 @@ ul {
   float: right;
 }
 
-.todo-container ul li button.btn, input[type="button"] {
+.todo__list li button.btn, input[type="button"] {
   -webkit-transition: all ease .6s;
   -o-transition: all ease .6s;
   transition: all ease .6s;
 }
 
-.todo-container ul li button.btn:hover, input[type="button"]:hover {
+.todo__list li button.btn:hover, input[type="button"]:hover {
   background-color: rgb(85, 110, 68);
 }
 

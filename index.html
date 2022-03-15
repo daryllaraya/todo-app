@@ -9,17 +9,17 @@
   <title>Todo App</title>
 </head>
 <body>
-  <div class="main-container">
-    <div class="todo-container">
-      <h1><span class="bold">Todo</span> App</h1>
-      <p>What is your main focus today?</p>
-      <form id="todoForm">
-        <input type="text" id="todoInput" placeholder="Hmmmm...">
-        <input type="button" id="todoSubmit" value="Add Todo">
+  <main>
+    <div class="todo">
+      <h1 class="todo__title"><span class="todo__title--bold">Todo</span> App</h1>
+      <p class="todo__copy">What is your main focus today?</p>
+      <form class="form" id="todoForm">
+        <input type="text" class="form__text" id="todoInput" placeholder="Hmmmm...">
+        <input type="button" class="form__btn" id="todoSubmit" value="Add Todo">
       </form>
-      <ul id="todoList"></ul>
+      <ul class="todo__list" id="todoList"></ul>
     </div>
-  </div>
+  </main>
   <script src="js/index.js"></script>
 </body>
 </html>
