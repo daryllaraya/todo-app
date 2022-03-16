@@ -9,12 +9,12 @@ const newTodo = text => {
   const span = document.createElement("span");
   const todoText = document.createTextNode(text);
   const todoDelete = document.createElement("button");
-  const todoDeleteText = document.createTextNode("x");
+  const todoDeleteText = document.createElement("i");
 
   checkBox.type = "checkbox";
   span.appendChild(todoText);
   todoDelete.appendChild(todoDeleteText);
-  todoDelete.classList.add("btn");
+  todoDelete.classList.add("btn", "bi", "bi-trash3-fill");
   todoDelete.setAttribute("onClick", "deleteTodo()");
 
   li.appendChild(checkBox);
