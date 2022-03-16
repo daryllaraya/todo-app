@@ -1,7 +1,7 @@
 /* VARIABLES */
 :root {
   --primary: #080936;
-  --secondary: #ffC636;
+  --secondary: #ffc636;
   --text-color: #dddbff;
   --border-color: #20214A;
   --primary-rgba-8: rgba(8, 9, 54, 0.8);
@@ -25,9 +25,8 @@ html, body {
 body {
   background-image: url(/images/lined-paper.png);
   background-color: var(--primary);
-  color: #333;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,20 +63,20 @@ main {
   background-color: var(--primary-rgba-8);
   border: 1px solid var(--secondary);
   border-radius: 10px;
-  padding: 75px;
+  padding: 45px;
   box-shadow: var(--secondary-rgba-5) 0px 5px 20px;
 }
 
 .todo__img {
   display: block;
-  max-width: 80px;
+  max-width: 50px;
   margin: 0 auto 20px;
 }
 
 .todo__title {
   color: var(--secondary);
   font-weight: 400;
-  font-size: 42px;
+  font-size: 36px;
   letter-spacing: 1px;
   margin: 0;
   text-align: center;
@@ -100,6 +99,12 @@ main {
   padding: 6px 0;
 }
 
+.todo__list li::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
 .todo__list li span {
   margin-left: 2px;
 }
@@ -110,12 +115,14 @@ main {
 
 .todo__list li .btn {
   background-color: var(--button-color);
-  border: none;
+  border: 1px solid var(--border-color);
   border-radius: 2px;
   color: var(--text-color);
   cursor: pointer;
   float: right;
+  font-size: 10px;
   margin-left: 10px;
+  padding: 4px 6px;
 }
 
 .todo__list li .btn, input[type="button"] {
@@ -145,8 +152,7 @@ main {
   color: var(--button-color);
   font-weight: 600;
   border: 1px solid var(--border-color);
-  padding: 12px;
-  min-width: 300px;
+  padding: 8px;
 }
 
 .form__text:focus, .form__text:focus-visible {
@@ -168,4 +174,44 @@ main {
 input[type="checkbox"] {
   vertical-align: middle;
   margin: 3px 3px 3px 0;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: var(--secondary);
+}
+
+/* MEDIA QUERIES */
+
+/* 576px BREAKPOINT */
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+
+  .todo {
+    padding: 75px;
+  }
+
+  .todo__img {
+    max-width: 80px;
+  }
+
+  .todo__title {
+    font-size: 42px;
+  }
+
+  .todo__list li .btn {
+    font-size: 14px;
+  }
+
+  .form__text {
+    padding: 12px;
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .todo {
+    padding: 30px;
+  }
 }
